@@ -1,0 +1,24 @@
+#!/bin/bash
+
+APPNAME="Adobe Photoshop CC"
+
+DESCRIPTION="Adobe Photoshop Image Editer"
+
+URL='http://www.adobe.com/products/photoshop.html'
+
+HELPSITE='http://www.adobe.com/support/contact/cscleanertool.html'
+
+uninstall() {
+    echo
+    echo "AppName: $APPNAME"
+    echo "Description: $DESCRIPTION"
+    echo "Site: $URL"
+    echo "Help page: $HELPSITE"
+    echo
+    echo "----- BEGIN COMMANDS -----"
+    echo "open '/Applications/Utilities/Adobe Installers/Uninstall Adobe Photoshop CC'"
+    echo "------ END COMMANDS ------"
+}
+
+$1
+

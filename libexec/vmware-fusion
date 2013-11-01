@@ -4,7 +4,7 @@ APPNAME="VMWare Fusion"
 
 DESCRIPTION="VMWare Fusion virtualization machine"
 
-URL='http://vmware.com/'
+URL='http://www.vmware.com/products/fusion/'
 
 HELPSITE='http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1017838&sliceId=1&docTypeID=DT_KB_1_1&dialogID=89072643&stateId=0%200%2089092194'
 
