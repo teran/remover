@@ -4,6 +4,9 @@ help() {
     echo 'USAGE:'
     echo "  $0 uninstall APPNAME"
     echo
+    echo "Available rules:"
+    echo
+    ls ./libexec
 }
 
 notexists() {
@@ -18,7 +21,7 @@ uninstall() {
 
 if [[ "$2" == "" ]]
 then
-    help
+    help | less
     exit
 fi
 
