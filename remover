@@ -1,0 +1,33 @@
+#!/bin/bash
+
+help() {
+    echo 'USAGE:'
+    echo "  $0 uninstall APPNAME"
+    echo
+}
+
+notexists() {
+    echo
+    echo "No remove info found for $1 :("
+    echo
+}
+
+uninstall() {
+    ./libexec/$1 uninstall 2>/dev/null || notexists $1
+}
+
+if [[ "$2" == "" ]]
+then
+    help
+    exit
+fi
+
+case "$1" in
+    uninstall)
+        uninstall "$2"
+    ;;
+    *)
+        help;
+    ;;
+esac
+

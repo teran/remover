@@ -1,0 +1,44 @@
+#!/bin/bash
+
+APPNAME="VMWare Fusion"
+
+DESCRIPTION="VMWare Fusion virtualization machine"
+
+URL='http://vmware.com/'
+
+HELPSITE='http://kb.vmware.com/selfservice/microsites/search.do?cmd=displayKC&docType=kc&externalId=1017838&sliceId=1&docTypeID=DT_KB_1_1&dialogID=89072643&stateId=0%200%2089092194'
+
+FILES=(
+    '/Library/Application Support/VMware'
+    '/Library/Application Support/VMware Fusion'
+    '/Library/Preferences/VMware Fusion'
+    '~/Library/Application Support/VMware Fusion'
+    '~/Library/Caches/com.vmware.fusion'
+    '~/Library/Preferences/VMware Fusion'
+    '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist'
+    '~/Library/Preferences/com.vmware.fusion.LSSharedFileList.plist.lockfile'
+    '~/Library/Preferences/com.vmware.fusion.plist'
+    '~/Library/Preferences/com.vmware.fusion.plist.lockfile'
+    '~/Library/Preferences/com.vmware.fusionDaemon.plist'
+    '~/Library/Preferences/com.vmware.fusionDaemon.plist.lockfile'
+    '~/Library/Preferences/com.vmware.fusionStartMenu.plist'
+    '~/Library/Preferences/com.vmware.fusionStartMenu.plist.lockfile'
+)
+
+uninstall() {
+    echo
+    echo "AppName: $APPNAME"
+    echo "Description: $DESCRIPTION"
+    echo "Site: $URL"
+    echo "Help page: $HELPSITE"
+    echo
+    echo "----- BEGIN COMMANDS -----"
+    for FILE in "${FILES[@]}"
+    do
+        echo "rm -rvf '$FILE'"
+    done
+    echo "------ END COMMANDS ------"
+}
+
+$1
+
