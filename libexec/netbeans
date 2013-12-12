@@ -1,0 +1,33 @@
+#!/bin/bash
+
+APPNAME="Netbeans"
+
+DESCRIPTION="Netbeans IDE"
+
+URL='http://netbeans.org'
+
+HELPSITE='http://wiki.netbeans.org/FaqUninstallMac'
+
+FILES=(
+    '~/Library/Application\ Support/NetBeans'
+    '~/Library/Caches/NetBeans'
+    '/private/var/db/receipts/org.netbeans.*'
+)
+
+uninstall() {
+    echo
+    echo "AppName: $APPNAME"
+    echo "Description: $DESCRIPTION"
+    echo "Site: $URL"
+    echo "Help page: $HELPSITE"
+    echo
+    echo "----- BEGIN COMMANDS -----"
+    for FILE in "${FILES[@]}"
+    do
+        echo "rm -rvf '$FILE'"
+    done
+    echo "------ END COMMANDS ------"
+}
+
+$1
+
