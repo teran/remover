@@ -35,10 +35,9 @@ uninstall() {
     echo "----- BEGIN COMMANDS -----"
     for FILE in "${FILES[@]}"
     do
-        echo "rm -rvf '$FILE'"
+        echo "sudo rm -rvf '$FILE'"
     done
     echo "------ END COMMANDS ------"
 }
 
 $1
-

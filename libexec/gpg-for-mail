@@ -1,17 +1,15 @@
 #!/bin/bash
 
-APPNAME="Netbeans"
+APPNAME="GPG for Mail"
 
-DESCRIPTION="Netbeans IDE"
+DESCRIPTION="GPG Plugin for Mail.app"
 
-URL='http://netbeans.org'
+URL='https://gpgtools.org'
 
-HELPSITE='http://wiki.netbeans.org/FaqUninstallMac'
+HELPSITE='https://gpgtools.tenderapp.com/kb/faq/uninstall-gpg-suite'
 
 FILES=(
-    '~/Library/Application\ Support/NetBeans'
-    '~/Library/Caches/NetBeans'
-    '/private/var/db/receipts/org.netbeans.*'
+    '/Library/Mail/Bundles/GPGMail.mailbundle'
 )
 
 uninstall() {
