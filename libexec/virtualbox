@@ -1,0 +1,30 @@
+#!/bin/bash
+
+APPNAME="VirtualBox"
+
+DESCRIPTION="VirtualBox virtualization"
+
+URL='https://www.virtualbox.org'
+
+HELPSITE='https://www.virtualbox.org/manual/ch02.html#idm871'
+
+uninstall() {
+    echo
+    echo "AppName: $APPNAME"
+    echo "Description: $DESCRIPTION"
+    echo "Site: $URL"
+    echo "Help page: $HELPSITE"
+    echo
+    echo "----- BEGIN COMMANDS -----"
+    echo "wget 'https://www.virtualbox.org/svn/vbox/trunk/src/VBox/Installer/darwin/DiskImage/VirtualBox_Uninstall.tool'"
+    echo "bash ./VirtualBox_Uninstall.tool"
+    echo "------ END COMMANDS ------"
+    echo
+    echo "Alternative way:"
+    echo " * Download VirtualBox dmg and mount it"
+    echo "----- BEGIN COMMANDS -----"
+    echo "bash /Volumes/VirtualBox/VirtualBox_Uninstall.tool"
+    echo "------ END COMMANDS ------"
+}
+
+$1
